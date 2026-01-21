@@ -1,0 +1,118 @@
+
+<!doctype html>
+<html>
+<head>
+    <title>Standard</title>
+    <script>(function(n,t,i,r){var u,f;n[i]=n[i]||{},n[i].initial={accountCode:"ALEXS11117",host:"ALEXS11117.pcapredict.com"},n[i].on=n[i].on||function(){(n[i].onq=n[i].onq||[]).push(arguments)},u=t.createElement("script"),u.async=!0,u.src=r,f=t.getElementsByTagName("script")[0],f.parentNode.insertBefore(u,f)})(window,document,"pca","//ALEXS11117.pcapredict.com/js/sensor.js")</script>
+    <style type="text/css">
+        body {
+            font: 15px arial;
+            background-color: #fafafa;
+            padding: 50px;
+        }
+
+        .section {
+            border: 1px solid #d5d5d5;
+            width: 600px;
+        }
+
+            .section .header {
+                padding: 20px;
+                font: bold 16px arial;
+                color: #fff;
+                text-shadow: 1px 1px #666;
+                background: #42c1d9; /* Old browsers */
+                background: -moz-linear-gradient(top, #42c1d9 0%, #36b3d1 100%); /* FF3.6+ */
+                background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#42c1d9), color-stop(100%,#36b3d1)); /* Chrome,Safari4+ */
+                background: -webkit-linear-gradient(top, #42c1d9 0%,#36b3d1 100%); /* Chrome10+,Safari5.1+ */
+                background: -o-linear-gradient(top, #42c1d9 0%,#36b3d1 100%); /* Opera 11.10+ */
+                background: -ms-linear-gradient(top, #42c1d9 0%,#36b3d1 100%); /* IE10+ */
+                background: linear-gradient(to bottom, #42c1d9 0%,#36b3d1 100%); /* W3C */
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#42c1d9', endColorstr='#36b3d1',GradientType=0 ); /* IE6-9 */
+            }
+
+            .section .content {
+                background-color: #fff;
+                padding: 30px;
+                text-align: right;
+            }
+
+        input {
+            width: 400px;
+            padding: 10px;
+            border: 1px solid #d5d5d5;
+            margin: 10px;
+        }
+
+        .input-line .half {
+            width: 177px;
+        }
+
+        label {
+            width: 100px;
+            font: bold 15px arial;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="section">
+        <div class="header">
+            Delivery Details
+        </div>
+        <div class="content">
+            <div class="input-line">
+                <label for="first-name">Name</label>
+                <input id="first-name" type="text" class="half" placeholder="First" />
+                <input id="last-name" type="text" class="half" placeholder="Last" />
+            </div>
+
+            <!-- Search box -->
+            <div class="input-line">
+                <label for="search">Search</label>
+                <input id="search" type="text" placeholder="Start typing your addess" />
+            </div>
+
+            <div class="input-line">
+                <label for="street-address">Address</label>
+                <input id="street-address" type="text" placeholder="Street address" />
+            </div>
+            <div class="input-line">
+                <label for="street-address2"></label>
+                <input id="street-address2" type="text" placeholder="" />
+            </div>
+            <div class="input-line">
+                <label for="city"></label>
+                <input id="city" type="text" placeholder="City" />
+            </div>
+            <div class="input-line">
+                <label for="state"></label>
+                <input id="state" type="text" placeholder="" />
+            </div>
+            <div class="input-line">
+                <label for="postcode"></label>
+                <input id="postcode" type="text" placeholder="Zip/Postcode" />
+            </div>
+            <div class="input-line">
+                <label for="country"></label>
+                <input id="country" type="text" value="GBR" />
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+     pca.on("load", (type, key, control) => { 
+              if(type === "capture+") {
+
+                control.listen("search", (options) => {
+                  //set filter to UK postcode WR15 8JF
+                  options.filter = "Postcode:WR15 8JF";
+                });
+              }
+            
+            });
+      </script> 
+   
+
+</body>
+</html>
